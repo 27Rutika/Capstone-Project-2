@@ -32,18 +32,18 @@ namespace Library_Management
             }
         }
 
-        public string bookName { get; set; }
+        public string BookName { get; set; }
 
 
-        public int bookCount { get; set; }
+        public int BookCount { get; set; }
 
-        public decimal bookPrice { get; set; }
+        public decimal BookPrice { get; set; }
 
         public decimal Cost
         {
             get
             {
-                return bookPrice * bookCount;
+                return BookPrice * BookCount;
             }
         }
 
@@ -56,13 +56,13 @@ namespace Library_Management
             else
             {
                 Book otherbook = (Book)obj;
-                return this.bookName.CompareTo(otherbook.bookName);
+                return this.BookName.CompareTo(otherbook.BookName);
 
             }
         }
         public override string ToString()
         {
-            return $"{BookId,5} {bookName,-20} {bookPrice,5} {bookCount,15} {Cost,20}";
+            return $"{BookId,5} {BookName,-20} {BookPrice,5} {BookCount,15} {Cost,20}";
         }
     }
 

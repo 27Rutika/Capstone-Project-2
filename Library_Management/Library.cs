@@ -24,11 +24,11 @@ namespace Library_Management
             Console.WriteLine();
             Console.WriteLine("Enter the details of the Book");
             Console.Write("Book Name : ");
-            B.bookName = Console.ReadLine();
+            B.BookName = Console.ReadLine();
             Console.Write("Book Price: ");
-            B.bookPrice = int.Parse(Console.ReadLine());
+            B.BookPrice = int.Parse(Console.ReadLine());
             Console.Write("Book Count: ");
-            B.bookCount = (int)decimal.Parse(Console.ReadLine());
+            B.BookCount = (int)decimal.Parse(Console.ReadLine());
 
             Bookinfo.Add(B);
         }
@@ -99,7 +99,7 @@ namespace Library_Management
                     Console.WriteLine("Book ID :{0}\t" +
                     "Book Name :{1}\t" +
                     "Book Price :{2}\t" +
-                    "Book Count :{3}\t" + "Cost:{4}", searchId.BookId, searchId.bookName, searchId.bookPrice, searchId.bookCount, searchId.Cost);
+                    "Book Count :{3}\t" + "Cost:{4}", searchId.BookId, searchId.BookName, searchId.BookPrice, searchId.BookCount, searchId.Cost);
                     Console.WriteLine("Book is Found");
                     found = true;
                 }
@@ -134,9 +134,9 @@ namespace Library_Management
                     B.username = Console.ReadLine();
                     Console.Write("\tEnter the count of the Books you want to return: ");
                     B.BorrowCount = int.Parse(Console.ReadLine());
-                    B.bookCount = B.bookCount + B.BorrowCount;
+                    B.BookCount = B.BookCount + B.BorrowCount;
                     Console.WriteLine("Book ID: {0} \t" + "Book Name: {1} \t" + "Book Price: {2} \t" + "Book Count: {3} \t" + "Cost: {4} \t" + "User id: {5} \t" + "User name: {6} \t" ,
-                    B.BookId, B.bookName, B.bookPrice, B.bookCount, B.Cost, B.userId, B.username);
+                    B.BookId, B.BookName, B.BookPrice, B.BookCount, B.Cost, B.userId, B.username);
                     DateTime dateTime = DateTime.Now;
                     Console.WriteLine("Return book Date and Time is: {0}", dateTime);
                     Console.WriteLine("Success");
@@ -172,9 +172,9 @@ namespace Library_Management
                     B.username = Console.ReadLine();
                     Console.Write("\tEnter the count of the Books you want to issue: ");
                     B.BorrowCount = int.Parse(Console.ReadLine());
-                    B.bookCount = B.bookCount - B.BorrowCount;
+                    B.BookCount = B.BookCount - B.BorrowCount;
                     Console.WriteLine("Book ID:{0} \t" + "Book name: {1} \t" + "Book price: {2} \t" + "Book Count: {3} \t" + "Cost: {4} \t" + "User id: {5} \t" + "User name: {6} \t",
-                    B.BookId, B.bookName, B.bookPrice, B.bookCount, B.Cost, B.userId, B.username);
+                    B.BookId, B.BookName, B.BookPrice, B.BookCount, B.Cost, B.userId, B.username);
                     DateTime dateTime = DateTime.Now;
                     Console.WriteLine("Issue Book Date and Time is: {0}", dateTime);
                     Console.WriteLine("-----Success------");
